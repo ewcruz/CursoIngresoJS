@@ -4,8 +4,8 @@ function mostrar()
 {
 	//elNombre.value="Edward Wayne Cruz";
 	var nombre;
-	nombre=prompt("Please enter your name", "Edward Wayne Cruz");
-	alert("Edward Wayne Cruz");
+	nombre=prompt("Please enter your name", nombre);
+	alert(nombre);
 }
 
 
