@@ -8,12 +8,10 @@ function mostrarAumento()
 	var aumento;
 	var salariofinal;
 
-	primerNumero=sueldo.value;
-	segundoNumero=resultado.value;
+	salario=sueldo.value;
 	aumento=salario*10/100 
 
-	primerNumero=parseInt(primerNumero);
-	segundoNumero=parseInt(segundoNumero);
+	salario=parseInt(salario);
 
 	salariofinal=salario+aumento;
 
