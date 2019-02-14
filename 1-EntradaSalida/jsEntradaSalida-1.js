@@ -1,5 +1,5 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'mostrar'.
-function mostrar()
+function mostrar(nombre)
 {
 	alert("ok");
 }
