@@ -1,14 +1,18 @@
 
 function mostrar()
 {
-	var pesoLila;
-	var pesoGorutta;
-///pedir datos????
-	pesoLila=pesoLila.value;
-	pesoGorutta=pesoGorutta.value;
+	var pesomascota1;
+	var pesomascota2;
+	var mascota1;
+	var mascota2;
 	
-	pesoLila=parseInt(pesoLila);
-	pesoGorutta=parseInt(pesoGorutta)
+	mascota1=nombre.value
+	mascota2=nombre.value
+	pesomascota1=pesomascota1.value;
+	pesomascota2=pesomascota2.value;
 	
-	alert (tenes dos mascotas Lila y Gorutta, que pesan pesoLila y pesoGorutta kilos, la suma de los kilos es pesoLila+pesoGorutta );
+	pesomascota1=parseInt(pesomascota1);
+	pesomascota2=parseInt(pesomascota2);
+	
+	alert (tenes dos mascotas mascota1 y mascota2, que pesan pesomascota1 y pesomascota2, la suma de los kilos es pesomascota1+pesomascota2);
 }
