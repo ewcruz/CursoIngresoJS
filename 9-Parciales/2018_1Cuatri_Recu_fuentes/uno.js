@@ -3,9 +3,12 @@ function mostrar()
 {
 	var pesoLila;
 	var pesoGorutta;
-
-	pesoLila=10;
-	pesoGorutta=12;
+///pedir datos????
+	pesoLila=pesoLila.value;
+	pesoGorutta=pesoGorutta.value;
 	
-	alert (tenes dos mascotas Lila y Gorutta, que pesan 10 y 12 kilos, la suma de los kilos es pesoLila+pesoGorutta );
+	pesoLila=parseInt(pesoLila);
+	pesoGorutta=parseInt(pesoGorutta)
+	
+	alert (tenes dos mascotas Lila y Gorutta, que pesan pesoLila y pesoGorutta kilos, la suma de los kilos es pesoLila+pesoGorutta );
 }
