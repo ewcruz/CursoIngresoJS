@@ -33,7 +33,27 @@ function verificar()
 	if(numeroingresado==numeroSecreto)
 
 	{
-		mensaje = ("SOS UN GENIO!!");
+		switch(contadorIntentos)
+		{
+  			case 1:
+  			mensaje="Que winner!!" +contadorIntentos+;
+    		break;
+
+    		case 2:
+    		mensaje="Casi de una!!";
+    		break;
+
+    		case 3:
+    		mensaje="Bastante rapido";
+
+
+    		case 4:
+    		mensaje
+  
+  		}
+  
+    
+
 	}
 	else
 	{
@@ -49,6 +69,9 @@ function verificar()
 		}
 
 	}
+
+	    
+}
 	
 	alert(mensaje);
 }
