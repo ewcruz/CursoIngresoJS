@@ -6,17 +6,14 @@ function mostrarAumento()
 {
 	var salario;
 	var aumento;
-	var salariofinal;
+	var salarioFinal;
 
-	salario=sueldo.value;
-	aumento=salario*10/100 
-
+	salario=document.getElementById('sueldo').value
 	salario=parseInt(salario);
 
-	salariofinal=salario+aumento;
+	aumento=salario*10/100;
+	salarioFinal=salario+aumento;
 
-	resultado.value=salariofinal;
-
-
+	document.getElementById('resultado').value=salarioFinal;
 	
 }
