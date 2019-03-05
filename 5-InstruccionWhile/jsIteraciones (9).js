@@ -1,48 +1,45 @@
 function mostrar()
 {
-
-	var contador;
-	var maximo;
-	var minimo;
 	var numero;
-	var respuesta='si';
-	
-	contador=0;
-	acumulador=0;
+	var contador;
+	var contadorNumero;
+	var acumuladorMaximo;
+	var acumuladorMinimo;
+	var respuesta;
 
-	while(respuesta!="no")
+	contador=0;
+	contadorNumero=0;
+	respuesta="si";
+
+	while(respuesta=="si")
 	{
-		
-		contador=contador+1;
-		numero=prompt("ingrese el numero " +contador+" # : ");
+		contadorNumero=contadorNumero+1;
+		numero=prompt("Ingrese el "+contadorNumero+"º numero.");
 		numero=parseInt(numero);
 
 		if(contador==0)
 		{
-			maximo=numero;
-			minimo=numero;
+			acumuladorMaximo=numero;
+			acumuladorMinimo=numero;
+		}
+				
+		if(numero>acumuladorMaximo)
+		{
+			acumuladorMaximo=numero;
 		}
 		else
 		{
-			if(numero<maximo)
+			if(numero<acumuladorMinimo)
 			{
-				maximo=numero;
-			}
-			if(numero<minimo)
-			{
-				minimo=numero;
+				acumuladorMinimo=numero;
 			}
 		}
 
-	
-		respuesta=prompt("si, para continuar");
-
-	
+		contador=contador+1;
+		respuesta=prompt("Desea ingresar otro numero?","si o no");
 	}
-	document.getElementById('maximo').value=maximo;
-	document.getElementById('minimo').value=minimo;
 
-
-
+	document.getElementById('maximo').value=acumuladorMaximo;
+	document.getElementById('minimo').value=acumuladorMinimo;
 
 }//FIN DE LA FUNCIÓN

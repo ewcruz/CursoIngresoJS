@@ -1,16 +1,13 @@
 function mostrar()
 {
+	var genero;
 
-	var sexo; 
-	sexo = prompt("ingrese f ó m .");
-	
-	while(sexo!="f" && sexo !="m")  
+	genero=prompt("Ingrese su sexo","f o m");
+
+	while(genero!="f"&&genero!="m")
 	{
-       sexo = prompt("error")
+		genero=prompt("Incorrecto, ingrese su sexo nuevamente");	
+	}
 
-	}	
-
-
-document.getElementById('Sexo').value=sexo;
-
+	document.getElementById('Sexo').value=genero;
 }//FIN DE LA FUNCIÓN
