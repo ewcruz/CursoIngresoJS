@@ -10,19 +10,88 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-	var lamparitas
-	var precio
-	var precioFinal
-	var descuento
- 	
- 	lamparitas=Cantidad.value
- 	precio=35
- 	precioFinal=lamparitas*precio
- 	descuento=precioFinal*50/100
+	var cantLamparas;
+	var precioLamparas;
+	var descuento;
+	var precioDescuento;
+	var precioDescuentoFinal;
+	var impuestoIIBB;
+	var precioFinal;
+	var marcaLampara;
 
- 		if(lamparitas>5)
- 		{
- 			mensaje= "Tiene un descuento del 50% comprando 6 o mas" +descuento+;
- 		}
- 	alert(mensaje)	
+	cantLamparas=document.getElementById('Cantidad').value;
+	cantLamparas=parseInt(cantLamparas);
+
+	marcaLampara=document.getElementById('Marca').value
+
+	precioLamparas=35;
+	
+
+	switch(cantLamparas)
+	{
+		case 5:
+			if(marcaLampara=="ArgentinaLuz")
+			{
+				descuento=0.4;
+			}
+			else
+			{
+				descuento=0.3;
+			}	
+		break;
+
+		case 4:
+			if(marcaLampara=="ArgentinaLuz"||marcaLampara=="FelipeLamparas")
+			{
+				descuento=0.25;
+			}
+			else
+			{
+				descuento=0.20;
+			}
+		break;
+		
+		case 3:
+			if(marcaLampara=="ArgentinaLuz")
+			{
+				descuento=0.15;
+			}
+			else
+			{
+				if(marcaLampara=="FelipeLamparas")
+				{
+					descuento=0.10;
+				}
+				else
+				{
+					descuento=0.05;
+				}
+			}
+		break;
+		
+		default:
+				if(cantLamparas>=6)
+				{
+					descuento=0.5		
+				}
+
+	}
+
+	precioDescuento=precioLamparas-(precioLamparas*descuento);
+	precioDescuentoFinal=precioDescuento*cantLamparas;
+
+	impuestoIIBB=precioDescuentoFinal*0.10;
+	precioFinal=precioDescuentoFinal+impuestoIIBB;
+
+	if(precioDescuentoFinal>120)
+	{
+		
+		alert("Por impuesto de IIBB usted pagara $"+precioFinal+", siendo $"+impuestoIIBB+" el monto del impuesto.");
+		document.getElementById('precioDescuento').value=precioFinal;
+	}
+	else
+	{
+		document.getElementById('precioDescuento').value=precioDescuentoFinal;
+	}
+
 }
