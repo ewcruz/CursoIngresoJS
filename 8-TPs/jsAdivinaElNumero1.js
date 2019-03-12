@@ -7,71 +7,65 @@ secreto del 1 al 100, en la pantalla del juego
 “Usted es un ganador!!! y en solo X intentos”.
 de no ser igual se debe informar si “falta…”  para llegar al número secreto  o si “se pasó…”  del número secreto.
 */
-var numeroSecreto; 
-var contadorIntentos;
+	var numeroSecreto;
+	var contadorIntentos;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	numeroSecreto=Math.floor((Math.random() * 100) + 1);
-	contadorIntentos=0;
-	//alert(numeroSecreto );
 	
+	numeroSecreto=Math.floor((Math.random() * 100) + 1);
+	console.log(numeroSecreto);
+	contadorIntentos=0;
 
 }
 
 function verificar()
 {
-	var numeroingresado;
-	var mensaje
+	
+	var numeroIngresado;
+	var mensaje;
 
-	contadorIntentos=contadorIntentos + 1;
-	numeroingresado=numero.value;
-	//alert(numeroingresado);
-	intentos.value=contadorIntentos;
+	numeroIngresado=document.getElementById('numero').value;
+	numeroIngresado=parseInt(numeroIngresado);
+	contadorIntentos=contadorIntentos+1;
+	contadorIntentos=parseInt(contadorIntentos);
 
-	if(numeroingresado==numeroSecreto)
-
+	if(numeroIngresado==numeroSecreto)
 	{
 		switch(contadorIntentos)
 		{
-  			case 1:
-  			mensaje="Que winner!!" +contadorIntentos+;
-    		break;
+			case 1:
+				mensaje="Sos un winner!! acertaste en el "+contadorIntentos+"º intento.";
+				break;
 
-    		case 2:
-    		mensaje="Casi de una!!";
-    		break;
+			case 2:
+				mensaje="Casi de una!! acertaste en el "+contadorIntentos+"º intento.";
+				break;
 
-    		case 3:
-    		mensaje="Bastante rapido";
+			case 3:
+				mensaje="Nada mal!! acertaste en el "+contadorIntentos+"º intento.";
+				break;
 
-
-    		case 4:
-    		mensaje
-  
-  		}
-  
-    
-
+			default:
+				mensaje="Muy bien, acertaste en el "+contadorIntentos+"º intento.";		
+		}
 	}
 	else
 	{
-		if(numeroingresado<numeroSecreto)
+		if(numeroIngresado<numeroSecreto)
 		{
-			mensaje = ("Falta");
+			mensaje="Falta...";
 		}
-		
 		else
 		{
-		 	mensaje = ("Te pasaste!!");
-
+			if(numeroIngresado>numeroSecreto)
+			{
+				mensaje="Te pasaste...";
+			}
 		}
-
 	}
 
-	    
-}
-	
+	document.getElementById('intentos').value=contadorIntentos;
 	alert(mensaje);
+		
 }
