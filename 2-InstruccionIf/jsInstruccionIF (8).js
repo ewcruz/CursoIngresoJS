@@ -1,6 +1,5 @@
 function mostrar()
 {
-//tomo la edad  
 	var años;
 	var estCivil;
 
@@ -9,7 +8,7 @@ function mostrar()
 
 	if(años>17&&estCivil=="Soltero")
 	{
-		alert("Usted es soltero y no es menor de edad. Replanteate las cosas amigo.");
+		alert("Usted es soltero y no es menor.");
 	}
 	
 }//FIN DE LA FUNCIÓN

@@ -11,7 +11,7 @@ function mostrar()
 			mensaje="Este mes tiene 28 dias.";
 			break;
 
-		case "Enero":
+		case "Enero ":
 		case "Marzo":
 		case "Mayo":
 		case "Julio":
@@ -22,7 +22,7 @@ function mostrar()
 			break;
 
 		default:
-			mensaje="Este mes tiene 30 dias.";		
+			mensaje="Este mes tiene 30 dias.";
 	}
 
 	alert(mensaje);

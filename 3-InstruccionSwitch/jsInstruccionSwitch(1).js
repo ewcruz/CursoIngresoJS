@@ -1,6 +1,5 @@
 function mostrar()
 {
-//tomo la edad  
   var mesDelAño;
   var mensaje;
 
@@ -8,24 +7,24 @@ function mostrar()
 
   switch(mesDelAño)
   {
-    case "Enero":
-      mensaje="Que comiences bien el año!!";
-      break;
-  
-    case "Marzo":    
-      mensaje="A clases!!";
-      break;
-    
-    case "Julio":
-      mensaje="Se vienen las vacaciones!!";
-      break;
+      case "Enero":
+        mensaje="Que comiences bien el año!!";
+        break;
 
-     case "Diciembre":
-      mensaje="Felices fiestas!!";
-      break; 
+      case "Marzo":
+        mensaje="A clases!!";
+        break;
+
+      case "Julio":
+        mensaje="Se vienen las vacaciones!!";
+        break;
+
+      case "Diciembre":
+        mensaje="Felices fiestas!!";
+        break;
   }
-    
-alert(mensaje);
+
+  alert(mensaje);
 
 }
 

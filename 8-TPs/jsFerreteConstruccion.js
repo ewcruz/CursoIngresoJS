@@ -11,15 +11,16 @@ function Rectangulo ()
 	var perimetroTerreno;
 	var alambreTotal;
 
-	largoTerreno=document.getElementById('Largo').value;
+	largoTerreno=document.getElementById('Largo').value;	
 	anchoTerreno=document.getElementById('Ancho').value;
+
 	largoTerreno=parseInt(largoTerreno);
 	anchoTerreno=parseInt(anchoTerreno);
 
 	perimetroTerreno=2*(largoTerreno+anchoTerreno);
 	alambreTotal=perimetroTerreno*3;
 
-	alert("La cantidad de alambre que vas a necesitar es de "+alambreTotal+" metros.");
+	alert("La cantidad de alambre necesaria para darle 3 vueltas al perimetro del terreno es de "+alambreTotal+" metros.");
 
 }
 function Circulo () 
@@ -31,30 +32,29 @@ function Circulo ()
 	radioTerreno=document.getElementById('Radio').value;
 	radioTerreno=parseInt(radioTerreno);
 
-	circunferenciaTerreno=3.14*2*radioTerreno;
-	alambreTotal=3*circunferenciaTerreno;
+	circunferenciaTerreno=2*3.14*radioTerreno;
+	alambreTotal=circunferenciaTerreno*3;
 
-	alert("La cantidad de alambre que vas a necesitar es de "+alambreTotal+" metros.");
-
+	alert("La cantidad de alambre necesaria para darle 3 vueltas a la circunferencia del terreno es de "+alambreTotal+" metros.");
 }
 function Materiales () 
 {
 	var largoTerreno;
 	var anchoTerreno;
 	var superficieTerreno;
-	var bolsasCemento;
-	var bolsasCal;
+	var cementoTotal;
+	var calTotal;
 
-	largoTerreno=document.getElementById('Largo').value;
+	largoTerreno=document.getElementById('Largo').value;	
 	anchoTerreno=document.getElementById('Ancho').value;
+
 	largoTerreno=parseInt(largoTerreno);
 	anchoTerreno=parseInt(anchoTerreno);
 
 	superficieTerreno=largoTerreno*anchoTerreno;
+	cementoTotal=superficieTerreno*2;
+	calTotal=superficieTerreno*3;
 
-	bolsasCemento=superficieTerreno*2;
-	bolsasCal=superficieTerreno*3;
-
-	alert("Para hacer el contrapiso vas a necesitar "+bolsasCemento+" bolsas de cemento y "+bolsasCal+" bolsas de cal.");
+	alert("La cantidad de cemento necesaria para el contrapiso del terreno es de "+cementoTotal+" bolsas, y la cantidad de cal necesaria es de "+calTotal+" bolsas.");
 	
 }

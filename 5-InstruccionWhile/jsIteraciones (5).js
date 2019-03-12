@@ -2,11 +2,11 @@ function mostrar()
 {
 	var genero;
 
-	genero=prompt("Ingrese su sexo","f o m");
+	genero=prompt("Indique su sexo aqui.","f o m");
 
 	while(genero!="f"&&genero!="m")
 	{
-		genero=prompt("Incorrecto, ingrese su sexo nuevamente");	
+		genero=prompt("Error, ingrese un sexo correcto.","f o m");
 	}
 
 	document.getElementById('Sexo').value=genero;

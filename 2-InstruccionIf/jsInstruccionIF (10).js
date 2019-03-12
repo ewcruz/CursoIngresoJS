@@ -1,28 +1,31 @@
 function mostrar()
 {
 //Genero el número RANDOM entre 1 y 10 
-	var nota;
+	var notas;
 	var mensaje;
 
-	nota=Math.floor(Math.random() * 10) + 1;
+	notas=Math.floor((Math.random() * 10) + 1);
+	//notas=parseInt(notas);
 
-	if(nota>8)
+	if(notas>8)
 	{
-		mensaje="EXCELENTE, su nota es un "+nota+".";
+		mensaje="Excelente!!, su nota es un "+notas+".";
+		console.log(notas);
 	}
 	else
 	{
-		if(nota>4&&nota<9)
+		if(notas>3&&notas<9)
 		{
-			mensaje="APROBO, su nota es un "+nota+".";
+			mensaje="Aprobo, su nota es un "+notas+".";
+			console.log(notas);
 		}
 		else
 		{
-			mensaje="Vamos la proxima se puede!! su nota es un "+nota+".";
+			mensaje="Vamos!! la proxima se puede; su nota es un "+notas+".";
+			console.log(notas);
 		}
 	}
 
-	console.log(nota);
-	alert(mensaje);	
+	alert(mensaje);
 
 }//FIN dE LA FUNCIÓN

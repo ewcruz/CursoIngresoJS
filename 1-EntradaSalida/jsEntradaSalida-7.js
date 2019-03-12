@@ -4,73 +4,73 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
 {	
-	var nroUno;
-	var nroDos;
-	var resultado;
+	var primerNro;
+	var segundoNro;
+	var suma;
 
-	nroUno=document.getElementById('numeroUno').value;
-	nroDos=document.getElementById('numeroDos').value;
+	primerNro=document.getElementById('numeroUno').value;
+	segundoNro=document.getElementById('numeroDos').value;
 
-	nroUno=parseInt(nroUno);
-	nroDos=parseInt(nroDos);
+	primerNro=parseInt(primerNro);
+	segundoNro=parseInt(segundoNro);
 
-	resultado=nroUno+nroDos;
+	suma=primerNro+segundoNro;
 
-	alert("El resultado de la suma es "+resultado+".");
-	
+	alert("El resultado de la suma es = "+suma+".");
+
 }
 
 function restar()
 {
-	var nroUno;
-	var nroDos;
-	var resultado;
+	var primerNro;
+	var segundoNro;
+	var resta;
 
-	nroUno=document.getElementById('numeroUno').value;
-	nroDos=document.getElementById('numeroDos').value;
+	primerNro=document.getElementById('numeroUno').value;
+	segundoNro=document.getElementById('numeroDos').value;
 
-	nroUno=parseInt(nroUno);
-	nroDos=parseInt(nroDos);
+	primerNro=parseInt(primerNro);
+	segundoNro=parseInt(segundoNro);
 
-	resultado=nroUno-nroDos;
+	resta=primerNro-segundoNro;
 
-	alert("El resultado de la resta es "+resultado+".");
-	
+	alert("El resultado de la resta es = "+resta+".");
+
 }
 
 function multiplicar()
 { 
-	var nroUno;
-	var nroDos;
-	var resultado;
+	var primerNro;
+	var segundoNro;
+	var multiplicacion;
 
-	nroUno=document.getElementById('numeroUno').value;
-	nroDos=document.getElementById('numeroDos').value;
+	primerNro=document.getElementById('numeroUno').value;
+	segundoNro=document.getElementById('numeroDos').value;
 
-	nroUno=parseInt(nroUno);
-	nroDos=parseInt(nroDos);
+	primerNro=parseInt(primerNro);
+	segundoNro=parseInt(segundoNro);
 
-	resultado=nroUno*nroDos;
+	multiplicacion=primerNro*segundoNro;
 
-	alert("El resultado de la multiplicacion es "+resultado+".");
+	alert("El resultado de la multiplicacion es = "+multiplicacion+".");
 	
 }
 
 function dividir()
 {
-	var nroUno;
-	var nroDos;
-	var resultado;
+	var primerNro;
+	var segundoNro;
+	var division;
 
-	nroUno=document.getElementById('numeroUno').value;
-	nroDos=document.getElementById('numeroDos').value;
+	primerNro=document.getElementById('numeroUno').value;
+	segundoNro=document.getElementById('numeroDos').value;
 
-	nroUno=parseInt(nroUno);
-	nroDos=parseInt(nroDos);
+	primerNro=parseInt(primerNro);
+	segundoNro=parseInt(segundoNro);
 
-	resultado=nroUno/nroDos;
+	division=primerNro/segundoNro;
 
-	alert("El resultado de la division es "+resultado+".");
+	alert("El resultado de la division es = "+division+".");
 	
 }
 

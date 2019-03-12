@@ -12,7 +12,7 @@ function mostrar()
 			break;
 
 		default:
-			mensaje="Este mes tiene 30 o mas dias.";		
+			mensaje="Este mes tiene 30 o mas dias.";
 	}
 
 	alert(mensaje);

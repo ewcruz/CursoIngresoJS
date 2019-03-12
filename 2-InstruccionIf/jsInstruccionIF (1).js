@@ -1,21 +1,19 @@
 function mostrar()
 {
-//tomo la edad
-	var edad;
+	var años;
 	var mensaje;
 
-	edad=document.getElementById('edad').value;
+	años=document.getElementById('edad').value;
 
-	if(edad==15)
+	if(años==15)
 	{
-		mensaje="La niña bonita";
-	}  
+		mensaje="La niña bonita.";
+	}
 	else
 	{
-		mensaje="Seguro vos sos feo";
+		mensaje="Vos debes ser feo/a.";
 	}
 
 	alert(mensaje);
-
 
 }//FIN DE LA FUNCIÓN

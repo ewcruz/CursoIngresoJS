@@ -4,27 +4,27 @@ B.	Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en
 */
 function FahrenheitCentigrados () 
 {
-	var tempe;
-	var fahrenheitCentigrados;
+	var temp;
+	var conversionFaC;
 
-	tempe=document.getElementById('Temperatura').value;
-	tempe=parseInt(tempe);	
+	temp=document.getElementById('Temperatura').value;
+	temp=parseInt(temp);
 
-	fahrenheitCentigrados=(tempe-32)*100/180;
+	conversionFaC=(temp-32)*5/9;
 
-	alert("La temperatura ingresada en Fahrenheit es de "+fahrenheitCentigrados+"ºC.");
+	alert(temp+"ºF son "+conversionFaC+"ºC.");
 }
 
 function CentigradosFahrenheit () 
 {
-	var tempe;
-	var centigradosFahrenheit;
+	var temp;
+	var conversionCaF;
 
-	tempe=document.getElementById('Temperatura').value;
-	tempe=parseInt(tempe);
+	temp=document.getElementById('Temperatura').value;
+	temp=parseInt(temp);
 
-	centigradosFahrenheit=(tempe*180/100)+32;
+	conversionCaF=(temp*9/5)+32;
 
-	alert("La temperatura ingresada en Celsius es de "+centigradosFahrenheit+"ºF.");
+	alert(temp+"ºC son "+conversionCaF+"ºF.");
 
 }

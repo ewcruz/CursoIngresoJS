@@ -4,7 +4,7 @@ B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
-{	
+{
 	var primerPrecio;
 	var segundoPrecio;
 	var tercerPrecio;
@@ -20,7 +20,8 @@ function Sumar ()
 
 	sumaPrecios=primerPrecio+segundoPrecio+tercerPrecio;
 
-	alert("La suma de los precios es = $"+sumaPrecios);	 
+	alert("El subtotal de la compra es "+sumaPrecios+".");
+	
 }
 function Promedio () 
 {
@@ -41,7 +42,7 @@ function Promedio ()
 	sumaPrecios=primerPrecio+segundoPrecio+tercerPrecio;
 	promedioPrecios=sumaPrecios/3;
 
-	alert("El promedio de los precios es = $"+promedioPrecios);
+	alert("El promedio de la compra es "+promedioPrecios+".");
 }
 function PrecioFinal () 
 {
@@ -49,7 +50,7 @@ function PrecioFinal ()
 	var segundoPrecio;
 	var tercerPrecio;
 	var sumaPrecios;
-	var iva;
+	var precioIVA;
 	var precioFinal;
 
 	primerPrecio=document.getElementById('PrecioUno').value;
@@ -61,10 +62,9 @@ function PrecioFinal ()
 	tercerPrecio=parseInt(tercerPrecio);
 
 	sumaPrecios=primerPrecio+segundoPrecio+tercerPrecio;
-	iva=sumaPrecios*21/100;
-	precioFinal=sumaPrecios+iva;
+	precioIVA=sumaPrecios*21/100;
+	precioFinal=sumaPrecios+precioIVA;
 
-	alert("Su precio final con el IVA es = $"+precioFinal);
-
+	alert("El precio final con IVA incluido es "+precioFinal+".");
 
 }

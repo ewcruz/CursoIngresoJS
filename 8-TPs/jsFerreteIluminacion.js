@@ -10,35 +10,34 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-	var cantLamparas;
-	var precioLamparas;
+	var cantidadLamparas;
+	var precioLampara;
+	var precioLamparaFinal;
+	var marcaLampara;
 	var descuento;
 	var precioDescuento;
 	var precioDescuentoFinal;
 	var impuestoIIBB;
 	var precioFinal;
-	var marcaLampara;
+	var mensaje;
 
-	cantLamparas=document.getElementById('Cantidad').value;
-	cantLamparas=parseInt(cantLamparas);
+	precioLampara=35;
+	marcaLampara=document.getElementById('Marca').value;
+	cantidadLamparas=document.getElementById('Cantidad').value;
+	cantidadLamparas=parseInt(cantidadLamparas);
 
-	marcaLampara=document.getElementById('Marca').value
-
-	precioLamparas=35;
-	
-
-	switch(cantLamparas)
+	switch(cantidadLamparas)
 	{
 		case 5:
 			if(marcaLampara=="ArgentinaLuz")
 			{
-				descuento=0.4;
+				descuento=0.40;
 			}
 			else
 			{
-				descuento=0.3;
-			}	
-		break;
+				descuento=0.30;
+			}
+			break;
 
 		case 4:
 			if(marcaLampara=="ArgentinaLuz"||marcaLampara=="FelipeLamparas")
@@ -49,8 +48,8 @@ function CalcularPrecio ()
 			{
 				descuento=0.20;
 			}
-		break;
-		
+			break;
+
 		case 3:
 			if(marcaLampara=="ArgentinaLuz")
 			{
@@ -67,31 +66,39 @@ function CalcularPrecio ()
 					descuento=0.05;
 				}
 			}
-		break;
-		
-		default:
-				if(cantLamparas>=6)
-				{
-					descuento=0.5		
-				}
+			break;
 
+		default:
+				if(cantidadLamparas>5)
+				{
+					descuento=0.50;
+				}
+				else
+				{
+					if(cantidadLamparas<3)
+					{
+						descuento=0;
+					}
+				}	
 	}
 
-	precioDescuento=precioLamparas-(precioLamparas*descuento);
-	precioDescuentoFinal=precioDescuento*cantLamparas;
-
-	impuestoIIBB=precioDescuentoFinal*0.10;
-	precioFinal=precioDescuentoFinal+impuestoIIBB;
+	precioLamparaFinal=cantidadLamparas*precioLampara;
+	precioDescuento=precioLamparaFinal*descuento;
+	precioDescuentoFinal=precioLamparaFinal-precioDescuento;
 
 	if(precioDescuentoFinal>120)
 	{
-		
-		alert("Por impuesto de IIBB usted pagara $"+precioFinal+", siendo $"+impuestoIIBB+" el monto del impuesto.");
-		document.getElementById('precioDescuento').value=precioFinal;
+		impuestoIIBB=precioDescuentoFinal*10/100;
+		precioFinal=precioDescuentoFinal+impuestoIIBB;
+
+		mensaje="Por impuesto de IIBB usted pagara $"+precioFinal+", siendo $"+impuestoIIBB+" el impuesto que se pago.";
+		document.getElementById('precioDescuento').value="$"+precioFinal;
 	}
 	else
-	{
-		document.getElementById('precioDescuento').value=precioDescuentoFinal;
-	}
+		{
+			mensaje="El precio final de su compra con descuento es de $"+precioDescuentoFinal+".";
+			document.getElementById('precioDescuento').value="$"+precioDescuentoFinal;
+		}
 
+		alert(mensaje);
 }

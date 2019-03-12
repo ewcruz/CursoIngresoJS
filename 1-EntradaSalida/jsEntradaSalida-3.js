@@ -6,7 +6,7 @@ function mostrar()
 
 	nombre=document.getElementById('elNombre').value;
 
-	alert("Su nombre es: "+nombre);
+	alert("Su nombre es "+nombre+".");
 }
 
 

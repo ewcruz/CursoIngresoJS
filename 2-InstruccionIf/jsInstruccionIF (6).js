@@ -1,6 +1,5 @@
 function mostrar()
 {
-//tomo la edad  
 	var años;
 	var mensaje;
 
@@ -18,7 +17,7 @@ function mostrar()
 		}
 		else
 		{
-			mensaje="Ud es un niño.";
+			mensaje="Usted es un niño";
 		}
 	}
 

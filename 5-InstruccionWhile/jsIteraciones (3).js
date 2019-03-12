@@ -6,7 +6,7 @@ function mostrar()
 
 	while(clave!="utn750")
 	{
-		clave=prompt("Clave incorrecta, intentelo nuevamente.");
+		clave=prompt("Error, ingrese su clave nuevamente.");
 	}
 
 	alert("Bienvenido.");

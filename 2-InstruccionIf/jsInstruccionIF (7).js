@@ -1,6 +1,5 @@
 function mostrar()
 {
-//tomo la edad  
 	var años;
 	var estCivil;
 
@@ -9,7 +8,7 @@ function mostrar()
 
 	if(años<18&&estCivil!="Soltero")
 	{
-		alert("Usted es muy chico para no ser soltero.");
+		alert("Usted es muy pequeño para NO ser soltero.");
 	}
 
 }//FIN DE LA FUNCIÓN

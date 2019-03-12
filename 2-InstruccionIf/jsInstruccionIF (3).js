@@ -1,18 +1,17 @@
 function mostrar()
 {
-//tomo la edad  
 	var años;
 	var mensaje;
 
-	años=document.getElementById('edad').value
+	años=document.getElementById('edad').value;
 
 	if(años>17)
 	{
-		mensaje="Usted es mayor de edad, bienvenido!";
+		mensaje="Usted es mayor de edad, bienvenido al sitio.";
 	}
 	else
 	{
-		mensaje="Usted NO es mayor de edad, larguese de aquì.";
+		mensaje="Usted tiene menos de 18 años, no puede permanecer en este sitio.";
 	}
 
 	alert(mensaje);

@@ -1,11 +1,11 @@
 function mostrar()
 {  
-	var laHora;
+	var horaDia;
 	var mensaje;
 
-	laHora=document.getElementById('hora').value;
+	horaDia=document.getElementById('hora').value;
 
-	switch(laHora)
+	switch(horaDia)
 	{
 		case "7":
 		case "8":
@@ -26,23 +26,15 @@ function mostrar()
 			mensaje="Es de tarde.";
 			break;
 
-		case "20":
-		case "21":
-		case "22":
-		case "23":
-		case "24":
-		case "0":
-		case "1":
-		case "2":
-		case "3":
-		case "4":
-		case "5":
-		case "6":
-			mensaje="Es de noche.";
-			break;
-
 		default:
-			mensaje="La hora no existe";		
+			if(horaDia<0||horaDia>24)
+			{
+				mensaje="Ingrese una hora valida";
+			}
+			else
+			{
+				mensaje="Es de noche.";
+			}
 	}
 
 	alert(mensaje);

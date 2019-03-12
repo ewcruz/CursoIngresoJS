@@ -1,21 +1,18 @@
 function mostrar()
 { 
-	var laHora;
-	var mensaje;
+	var horaDia;
 
-	laHora=document.getElementById('hora').value;
+	horaDia=document.getElementById('hora').value;
 
-	switch(laHora)
+	switch(horaDia)
 	{
 		case "7":
 		case "8":
 		case "9":
 		case "10":
 		case "11":
-			mensaje="Es de mañana.";
+			alert("Es de mañana.");
 			break;
 	}
 
-	alert(mensaje);
-	
 }//FIN DE LA FUNCIÓN
