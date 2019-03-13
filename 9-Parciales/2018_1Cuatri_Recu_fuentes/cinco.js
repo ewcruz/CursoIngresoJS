@@ -1,26 +1,30 @@
 function mostrar()
 {
-	var precioHabitacion;
+	var diaSemana;
 	var mensaje;
 
-	precioHabitacion=prompt("Indique el monto a cobrar ","");
-	precioHabitacion=parseInt(precioHabitacion);
+	diaSemana=prompt("Ingrese aqui un dia de la semana.");
 
-	switch(precioHabitacion)
+	switch(diaSemana)
 	{
-		case "Visa":
-		mensaje=precioHabitacion*0.9;
-		break;
+		case "sabado":
+		case "domingo":
+			mensaje="Buen finde!!";
+			break;
 
-		case "Paypal"
-		mensaje=precioHabitacion*0.85;
-		break;
+		case "lunes":
+		case "martes":
+		case "miercoles":
+		case "jueves":
+		case "viernes":
+			mensaje="A trabajar!!";
+			break;
 
-		case "mercadoPago"
-		mensaje=precioHabitacion*0.9;
-		break;
+		default:
+			mensaje="Ingrese un dia valido";
 
-		case "todoIncluido"
-		mensaje= 
+	}	
 
-	}
+	alert(mensaje);
+
+}

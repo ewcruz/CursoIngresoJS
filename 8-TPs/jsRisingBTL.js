@@ -15,10 +15,7 @@ function ComenzarIngreso ()
  	var sueldoBruto;
  	var nroLegajo;
  	var nacionalidades;
- 	var mensaje;
- 	var mensajeGen;
- 	var mensajeNac;
-
+   	
  	años=prompt("Ingrese su edad aqui","entre 18 y 90 años");
  	años=parseInt(años);
 
@@ -40,15 +37,15 @@ function ComenzarIngreso ()
  	switch(genero)
  	{
  		case "f":
- 			mensajeGen="Femenino";
+ 			genero="Femenino";
  			break;
 
  		case "m":
- 			mensajeGen="Masculino";
+ 			genero="Masculino";
  			break;
  	}
 
- 	document.getElementById('Sexo').value=mensajeGen;
+ 	document.getElementById('Sexo').value=genero;
 
  	estCivil=prompt("Ingrese su estado civil","1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos");
  	estCivil=parseInt(estCivil);
@@ -62,23 +59,23 @@ function ComenzarIngreso ()
  	switch(estCivil)
  	{
  		case 1:
- 			mensaje="Soltero"; 
+ 			estCivil="Soltero"; 
  			break;
 
  		case 2:
- 			mensaje="Casado";
+ 			estCivil="Casado";
  			break;	
 
  		case 3:
- 			mensaje="Divorciado";
+ 			estCivil="Divorciado";
  			break;
 
  		case 4:
- 			mensaje="Viudos";
+ 			estCivil="Viudos";
  			break;
  	}
 
- 	document.getElementById('EstadoCivil').value=mensaje;
+ 	document.getElementById('EstadoCivil').value=estCivil;
 
  	sueldoBruto=prompt("Ingrese su sueldo bruto aqui","no menor a $8000");
  	sueldoBruto=parseInt(sueldoBruto);
@@ -112,18 +109,18 @@ function ComenzarIngreso ()
  	switch(nacionalidades)
  	{
  		case "a":
- 			mensajeNac="Argentino";
+ 			nacionalidades="Argentino";
  			break;
 
  		case "e":
- 			mensajeNac="Extranjero";
+ 			nacionalidades="Extranjero";
  			break;
 
  		case "n":
- 			mensajeNac="Nacionalizado";
+ 			nacionalidades="Nacionalizado";
  			break;
  	}
 
- 	document.getElementById('Nacionalidad').value=mensajeNac;
+ 	document.getElementById('Nacionalidad').value=nacionalidades;
 
 }

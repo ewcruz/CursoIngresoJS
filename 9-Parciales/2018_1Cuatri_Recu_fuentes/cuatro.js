@@ -2,42 +2,40 @@ function mostrar()
 {
 	var primerNro;
 	var segundoNro;
-	var tercerNro;
-	var cuartoNro;
-	var montoCompra;
-	var descuento;
-	var montoFinal;
 	var mensaje;
+	var suma;
+	var division;
 
-	primerNro=prompt("ingrese el precio","0");
-	segundoNro=prompt("ingrese el precio","0");
-	tercerNro=prompt("ingrese el precio","0");
-	cuartoNro=prompt("ingrese el precio","0");
+	primerNro=prompt("Ingrese aqui el primer numero.");
+	segundoNro=prompt("Ingrese aqui el segundo numero.");
 
 	primerNro=parseInt(primerNro);
 	segundoNro=parseInt(segundoNro);
-	tercerNro=parseInt(tercerNro);
-	cuartoNro=parseInt(cuartoNro);
 
-	montoCompra=primerNro+segundoNro+tercerNro+cuartoNro;
-
-	if(montoCompra>99)
+	if(primerNro==segundoNro)
 	{
-		mensaje=montoCompra*0.90;
+		mensaje="Ingresaste dos numeros iguales, el primer numero es "+primerNro+", y el segundo numero es "+segundoNro+".";
 	}
 	else
 	{
-		if(montoCompra>50&&montoCompra<100)
+		if(primerNro>segundoNro)
 		{
-			mensaje=montoCompra*0.95;
+			division=primerNro/segundoNro;
+			mensaje="Como el primer numero es mayor que el segundo los dividimos y el resultado es = "+division+".";
 		}
 		else
 		{
-			mensaje=montoCompra*1.15;
-		}		
+			suma=primerNro+segundoNro;
+			mensaje="Como el primer numero es menor que el segundo los sumamos y el resultado es = "+suma+".";
+		}
+		if(suma<50)
+		{
+			mensaje="La suma es = "+suma+", y es menor a 50.";
+		}
 
 	}
-			alert("Su precio final "+mensaje);
+
+	alert(mensaje);
 
 }
 
