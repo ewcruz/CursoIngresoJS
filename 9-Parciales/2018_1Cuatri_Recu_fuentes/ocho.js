@@ -1,47 +1,65 @@
+/*Realizar el algoritmo que permita iterar el ingreso de dos datos, una letra y 
+un número entre -100 y 100 (validar) hasta que el usuario quiera 
+e informar al terminar el ingreso por document.write: 
+a) La cantidad de números pares. 
+b) La cantidad de números impares. 
+c) La cantidad de ceros. 
+d) El promedio de todos los números positivos ingresados. 
+e) La suma de todos los números negativos. 
+f) El número y la letra del máximo y el mínimo.
+
+Testeo con los siguientes datos 
+( d , -150(mal) , -50(bien)) 
+( z , 0) 
+( g , 20) 
+( a , 150(mal) , 0(bien)) 
+( b , 3) 
+( k , 7)*/
+
+
+
+
+
 function mostrar()
 {
 	var letra;
 	var numero;
-	var contadorNumeros;
-	var contadorLetras;
 	var contadorPares;
 	var contadorImpares;
 	var contadorCeros;
-	var acumuladorPares;
-	var acumuladorLetraMinima;
-	var acumuladorLetraMAxima;
 	var contadorPositivos;
+	var promedioPositivos;
 	var acumuladorPositivos;
 	var acumuladorNegativos;
-	var promedioPositivos;
-	var sumaNegativos;
 	var acumuladorNumeroMaximo;
 	var acumuladorNumeroMinimo;
+	var acumuladorLetraMaxima;
+	var acumuladorLetraMinima;
+	var contadorNumero;
 	var contador;
 	var respuesta;
 
-	contadorNumeros=0;
 	contadorPares=0;
 	contadorImpares=0;
 	contadorCeros=0;
+	contadorNumero=0;
+	contador=0;
 	contadorPositivos=0;
 	acumuladorPositivos=0;
 	acumuladorNegativos=0;
-	contador=0;
-	respuesta="si;"
+	respuesta="si";
 
 	while(respuesta=="si")
 	{
-		contadorLetras=contadorLetras+1;
-		letra=prompt("Ingrese la "+contadorLetras+" letra.");
+		letra=prompt("Ingrese una letra aqui","a...z");
 
-		contadorNumeros=contadorNumeros+1;
-		numero=prompt("Ingrese aqui el "+contadorNumeros+"º numero.");
+		contadorNumero=contadorNumero+1;
+		numero=prompt("Ingrese el "+contadorNumero+"º numero aqui.");
 		numero=parseInt(numero);
 
 		while(numero<-100||numero>100)
 		{
-			numero=prompt("Ingrese un numero valido");
+			numero=prompt("Error, ingrese un numero valido","entre -100 y 100");
 			numero=parseInt(numero);
 		}
 
@@ -54,41 +72,39 @@ function mostrar()
 			if(numero>0)
 			{
 				acumuladorPositivos=acumuladorPositivos+numero;
-				contadorPositivos=contadorPositivos+1;
+				contadorPositivos=contadorPositivos+1
 			}
 			else
 			{
-				if(numero<0)
-				{
-					acumuladorNegativos=acumuladorNegativos+numero;
-				}
-		
-		if(numero%2==0&&numero!=0 )
+				acumuladorNegativos=acumuladorNegativos+numero;
+			}
+		}
+
+		if(numero%2==0&&numero!=0)
 		{
-			contadorPares=contadorPares+1;
+			contadorPares=contadorPares+1
 		}
 		else
 		{
-			if(numero%2==1)
+			if(numero%2!=0)
 			{
-				contadorImpares=contadorImpares+1;
+				contadorImpares=contadorImpares+1;				
 			}
-															
 		}
-		
+
 		if(contador==0)
 		{
-			acumuladorNumeroMaximo=numero;
 			acumuladorNumeroMinimo=numero;
-			acumuladorLetraMAxima=letra;
+			acumuladorNumeroMaximo=numero;
 			acumuladorLetraMinima=letra;
+			acumuladorLetraMaxima=letra;
 		}
 		else
 		{
 			if(numero>acumuladorNumeroMaximo)
 			{
 				acumuladorNumeroMaximo=numero;
-				acumuladorLetraMAxima=letra;
+				acumuladorLetraMaxima=letra;
 			}
 			else
 			{
@@ -97,7 +113,6 @@ function mostrar()
 					acumuladorNumeroMinimo=numero;
 					acumuladorLetraMinima=letra;
 				}
-																
 			}
 		}
 
@@ -107,14 +122,13 @@ function mostrar()
 	}
 
 	promedioPositivos=acumuladorPositivos/contadorPositivos;
-	sumaNegativos=acumuladorNegativos;
 
-	document.write( "La cantidad de números pares es ="+contadorPares+"."+"<br>"+
-					"La cantidad de números impares es = "+contadorImpares+"."+"<br>"+
-					"La cantidad de ceros es = "+contadorCeros+"."+"<br>"+
-					"El promedio de todos los números positivos ingresados es = "+promedioPositivos+"."+"<br>"+
-					"La suma de todos los números negativos es = "+sumaNegativos+"."+"<br>"+
-					"El número y la letra del máximo son = "+acumuladorNumeroMaximo+" y "+acumuladorLetraMAxima+"."+"<br>"+
-					"El número y la letra del minimo son = "+acumuladorNumeroMinimo+" y "+acumuladorLetraMinima+"."+"<br>");
+	document.write( "a) La cantidad de números pares es = "+contadorPares+"."+"<br>"+
+					"b) La cantidad de números impares es = "+contadorImpares+"."+"<br>"+
+					"c) La cantidad de ceros es = "+contadorCeros+"."+"<br>"+
+					"d) El promedio de todos los números positivos ingresados es = "+promedioPositivos+"."+"<br>"+
+					"e) La suma de todos los números negativos es = "+acumuladorNegativos+"."+"<br>"+
+					"f) El número y la letra del máximo son = "+acumuladorNumeroMaximo+" y "+acumuladorLetraMaxima+"."+"<br>"+
+					"g) El número y la letra del minimo son = "+acumuladorNumeroMinimo+" y "+acumuladorLetraMinima+"."+"<br>");
 
 }
